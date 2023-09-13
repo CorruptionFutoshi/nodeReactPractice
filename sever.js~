@@ -5,8 +5,7 @@ const html=require('fs').readFileSync('index.html');
 const server = http.createServer((req,res)=>{
 	res.statusCode=200;
 	res.setHeader('Content-Type','text/html;charset=UTF-8');
-	res.write(html);
-	res.end();
+	res.end(html);
 });
 
 server.listen(port, ()=>{
